@@ -31,6 +31,7 @@
 </template>
 
 <script>
+    //this is a comment
     let researchIcon = require('../assets/designAgencyAssets/research.svg');
     let brandIdentity = require('../assets/designAgencyAssets/brandIdentity.svg');
     let computer = require('../assets/designAgencyAssets/computer.svg');
