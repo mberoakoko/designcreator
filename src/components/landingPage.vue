@@ -61,6 +61,6 @@
         font-size: 3rem;
     }
     .text h3 label{
-        color: #bcbf00;
+        color: #bfbf00;
     }
 </style>
