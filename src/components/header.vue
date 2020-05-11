@@ -2,7 +2,11 @@
     <div class="navigationBar">
         <div class="Logo">LOGO</div>
         <nav>
-            <a v-for="item in navLinks" :key="item.title" :href="item.link">{{item.title}}</a>
+            <router-link class="routerLink"
+                         v-for="item in navLinks" :key="item.title"
+                         :to="item.link">
+                {{item.title}}
+            </router-link>
         </nav>
     </div>
 </template>
@@ -13,11 +17,11 @@
         data(){
             return{
                 navLinks:[
-                    {title: 'Home', link: '#'},
-                    {title: 'Portfolio', link: '#'},
-                    {title: 'Blog', link: '#'},
-                    {title: 'About', link: '#'},
-                    {title: 'Contact', link: '#'},
+                    {title: 'Home', link: '/'},
+                    {title: 'Portfolio', link: '/portfolio'},
+                    {title: 'Blog', link: '/blog'},
+                    {title: 'About', link: '/about'},
+                    {title: 'Contact', link: '/contact'},
 
                 ]
             }
@@ -59,7 +63,7 @@
         margin-left: auto;
         margin-right: 40px;
     }
-    .navigationBar nav a{
+    .navigationBar nav .routerLink{
         text-decoration: none;
         margin-right: 30px;
         font-size: 1.2rem;

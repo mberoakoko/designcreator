@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <Header class="header"></Header>
-    <LandingPage class="landingPage"></LandingPage>
-    <Latestwork class="latestWork"></Latestwork>
-    <ContactFooter class="contactFooter"></ContactFooter>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -11,15 +9,9 @@
 
 
 import Header from "@/components/header";
-import LandingPage from "@/components/landingPage";
-import Latestwork from "@/components/latestwork";
-import ContactFooter from "@/components/contactFooter";
 export default {
   name: 'App',
   components: {
-    ContactFooter,
-    Latestwork,
-    LandingPage,
     Header
   }
 }
@@ -37,20 +29,6 @@ export default {
     font-size: 14px;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-rows: repeat(6, 100vh);
-    grid-template-areas: "." "." ".";
   }
-  .header{
-    grid-row: 1/2;
-  }
-  .landingPage{
-    grid-row: 2/3;
-  }
-  .latestWork{
-    grid-row: 3/5;
-  }
-  .contactFooter{
-    grid-row: 5/6;
-  }
+
 </style>
