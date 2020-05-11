@@ -3,6 +3,7 @@
     <Header class="header"></Header>
     <LandingPage class="landingPage"></LandingPage>
     <Latestwork class="latestWork"></Latestwork>
+    <ContactFooter class="contactFooter"></ContactFooter>
   </div>
 </template>
 
@@ -12,9 +13,11 @@
 import Header from "@/components/header";
 import LandingPage from "@/components/landingPage";
 import Latestwork from "@/components/latestwork";
+import ContactFooter from "@/components/contactFooter";
 export default {
   name: 'App',
   components: {
+    ContactFooter,
     Latestwork,
     LandingPage,
     Header
@@ -46,5 +49,8 @@ export default {
   }
   .latestWork{
     grid-row: 3/5;
+  }
+  .contactFooter{
+    grid-row: 5/6;
   }
 </style>
